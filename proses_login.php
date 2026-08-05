@@ -28,6 +28,12 @@ if (mysqli_num_rows($hasil) == 1) {
 
         header('Location: dashboard.php');
         exit;
+
+    } else {
+    $_SESSION['pesan_error'];
+    header ('Location: login.php');
+    exit;
+    
     } 
 } else {
     $_SESSION['pesan_error'] = 'username tidak ditemukan!' ;
