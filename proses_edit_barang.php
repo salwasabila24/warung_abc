@@ -13,10 +13,10 @@ $exp     = $_POST['tanggal_kadaluarsa'];
 $exp_sql = $exp === '' ? 'NULL' : "'$exp'";
 
 $sql   = "UPDATE tbl_barang SET kode_barang='$kode', nama_barang='$nama', ";
-$sql  .= "harga_satuan='$harga', stok='$stok', tangga_kadaluarsa=$exp_sql ";
+$sql  .= "harga_satuan='$harga', stok='$stok', tanggal_kadaluarsa=$exp_sql ";
 $sql  .= "WHERE id_barang = '$id'";
 
-if(mysqli_query($koneksi, $log)) {
+if(mysqli_query($koneksi, $sql)) {
     $id_user   = $_SESSION['id_user'];
     $waktu     = date('Y-m-d H:i:s');
     $aktivitas = "edit_barang: $nama";

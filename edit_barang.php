@@ -31,7 +31,7 @@ $data  = mysqli_fetch_assoc($hasil);
             <tr><td>Tanggal Kadaluarsa </td><td>:</td>
                 <td><input type="date" name="tanggal_kadaluarsa"
                 value="<?php echo $data ['tanggal_kadaluarsa']; ?>" required></td></tr>
-            <tr><td colspan="3"><<input type="submit" value="Update"></td></tr>
+            <tr><td colspan="3"><input type="submit" value="Update"></td></tr>
         </table>        
     </form>
     <p><a href="data_barang.php">Kembali</a></p>
